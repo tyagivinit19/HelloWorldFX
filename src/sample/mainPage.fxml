@@ -30,7 +30,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="272.0" prefWidth="251.0" style="-fx-background-color: white;" GridPane.columnIndex="1">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#library" prefHeight="272.0" prefWidth="251.0" style="-fx-background-color: white;" GridPane.columnIndex="1">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -39,7 +39,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="272.0" prefWidth="251.0" style="-fx-background-color: white;" GridPane.rowIndex="1">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#finance" prefHeight="272.0" prefWidth="251.0" style="-fx-background-color: white;" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -48,7 +48,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="272.0" prefWidth="251.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#admin" prefHeight="272.0" prefWidth="251.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
