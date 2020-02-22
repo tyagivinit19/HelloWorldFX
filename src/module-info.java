@@ -1,4 +1,4 @@
-module HelloWorldFX {
+module ERP {
 
     requires javafx.controls;
     requires javafx.fxml;
