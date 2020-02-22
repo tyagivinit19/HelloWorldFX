@@ -26,7 +26,7 @@ public class Controller {
     public void finance(ActionEvent actionEvent) {
     }
 
-    public void admin(ActionEvent actionEvent) throws IOException, ClassNotFoundException {
+    public void admin(ActionEvent actionEvent) throws IOException{
 
         Parent newroot = FXMLLoader.load(getClass().getResource("logIn.fxml"));
 
