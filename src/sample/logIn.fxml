@@ -10,10 +10,11 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogInController">
    <children>
       <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="119.0" prefWidth="600.0" style="-fx-background-color: blue;" />
-      <Label layoutX="121.0" layoutY="192.0" style="-fx-font-size: 20px;" text="Username" />
-      <TextField fx:id="username" layoutX="315.0" layoutY="188.0" />
-      <Label layoutX="121.0" layoutY="262.0" style="-fx-font-size: 20px;" text="Password" />
+      <Label layoutX="119.0" layoutY="158.0" style="-fx-font-size: 20px;" text="Username" />
+      <TextField fx:id="username" layoutX="315.0" layoutY="161.0" />
+      <Label layoutX="122.0" layoutY="229.0" style="-fx-font-size: 20px;" text="Password" />
       <Button layoutX="252.0" layoutY="330.0" mnemonicParsing="false" onAction="#logIn" style="-fx-background-color: #4CAF50; -fx-border-color: white; -fx-padding: 10px 20px; -fx-text-alignment: center; -fx-font-size: 15;" text="LogIn" />
-      <PasswordField fx:id="password" layoutX="315.0" layoutY="265.0" />
+      <PasswordField fx:id="password" layoutX="315.0" layoutY="232.0" />
+      <Label fx:id="msg" layoutX="284.0" layoutY="288.0" style="-fx-text-fill: red; -fx-font-size: 15px;" />
    </children>
 </AnchorPane>
