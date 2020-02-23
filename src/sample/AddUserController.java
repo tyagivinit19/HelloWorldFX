@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import sample.databaseClasses.AddUser;
 
 public class AddUserController {
 
@@ -87,7 +88,8 @@ public class AddUserController {
 
         if (count == 0)
         {
-
+            AddUser ob = new AddUser();
+            ob.add(userName, name, address, phone, password);
         }
 
 
