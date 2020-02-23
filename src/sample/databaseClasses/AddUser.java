@@ -10,9 +10,10 @@ public class AddUser {
     public static final String CONNECTION_STRING = "jdbc:sqlite:D:\\Database\\" + DB_NAME;
 
 
-    public void add (String userName, String name,
+    public boolean add (String userName, String name,
                      String address, String phone, String password)
     {
+        boolean k = false;
         try
         {
             System.out.println("well done");
@@ -26,11 +27,11 @@ public class AddUser {
 
             statement.close();
             conn.close();
+            k = true;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
 
-
-
+        return k;
     }
 }

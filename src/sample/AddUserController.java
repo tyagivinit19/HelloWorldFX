@@ -1,10 +1,17 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import sample.databaseClasses.AddUser;
+
+import java.io.IOException;
 
 public class AddUserController {
 
@@ -15,8 +22,9 @@ public class AddUserController {
     public PasswordField password;
     public PasswordField cPassword;
     public Label msg;
+    public AnchorPane aU;
 
-    public void submit(ActionEvent actionEvent) {
+    public void submit(ActionEvent actionEvent) throws IOException {
 
         String userName = this.userName.getText();
         String name = this.name.getText();
@@ -89,7 +97,16 @@ public class AddUserController {
         if (count == 0)
         {
             AddUser ob = new AddUser();
-            ob.add(userName, name, address, phone, password);
+            boolean status = ob.add(userName, name, address, phone, password);
+
+            if (status)
+            {
+                Parent newroot = FXMLLoader.load(getClass().getResource("addSucess.fxml"));
+
+                Stage stage = (Stage) aU.getScene().getWindow();
+                stage.setScene(new Scene(newroot));
+                stage.show();
+            }
         }
 
 
