@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class AdminLogIn {
 
-    public static final String DB_NAME = "adminLogInDatabase.db";
+    public static final String DB_NAME = "ERP.db";
     public static final String CONNECTION_STRING = "jdbc:sqlite:D:\\Database\\" + DB_NAME;
 
     public int searchAdmin(String user, String pass) {
