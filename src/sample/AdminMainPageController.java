@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class AdminController {
+public class AdminMainPageController {
 
 
     public AnchorPane aMP;
