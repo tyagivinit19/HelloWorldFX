@@ -1,12 +1,12 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import sample.databaseClasses.AddUser;
@@ -23,6 +23,7 @@ public class AddUserController {
     public PasswordField cPassword;
     public Label msg;
     public AnchorPane aU;
+    public ChoiceBox choiceBox;
 
     public void submit(ActionEvent actionEvent) throws IOException {
 
@@ -32,6 +33,13 @@ public class AddUserController {
         String phone = this.phone.getText();
         String password = this.password.getText();
         String cPassword = this.cPassword.getText();
+
+
+        String branch = (String) choiceBox.getValue();
+//        System.out.println(s);
+
+
+
 
         int count = 0;
 
@@ -84,7 +92,15 @@ public class AddUserController {
                                 }
                                 else
                                 {
-                                    count=0;
+//                                    count=0;
+                                    if (branch.equals("null"))
+                                    {
+                                        msg.setText("Choose a Branch for User.");
+                                    }
+                                    else
+                                    {
+                                        count = 0;
+                                    }
                                 }
                             }
 
@@ -97,7 +113,7 @@ public class AddUserController {
         if (count == 0)
         {
             AddUser ob = new AddUser();
-            boolean status = ob.add(userName, name, address, phone, password);
+            boolean status = ob.add(userName, name, address, phone, password, branch);
 
             if (status)
             {

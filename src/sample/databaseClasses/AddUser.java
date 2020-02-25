@@ -11,7 +11,7 @@ public class AddUser {
 
 
     public boolean add (String userName, String name,
-                     String address, String phone, String password)
+                     String address, String phone, String password, String branch)
     {
         boolean k = false;
         try
@@ -21,7 +21,7 @@ public class AddUser {
             Statement statement = conn.createStatement();
 
 
-            statement.execute("INSERT INTO User (userName, name, address, phone, password)" +
+            statement.execute("INSERT INTO " + branch + " (userName, name, address, phone, password)" +
                     "VALUES('" + userName + "','" + name + "','" + address + "'," +
                     "'" + phone + "','" + password +"')");
 
