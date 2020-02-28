@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DeleteUserController">
+   <children>
+      <Pane prefHeight="88.0" prefWidth="601.0" style="-fx-background-color: blue;" />
+      <AnchorPane layoutY="87.0" prefHeight="313.0" prefWidth="601.0">
+         <children>
+            <Label layoutX="54.0" layoutY="30.0" text="UserName" textAlignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="57.0" layoutY="200.0" text="Name" textAlignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="userName" alignment="CENTER" layoutX="345.0" layoutY="26.0">
+               <font>
+                  <Font name="SansSerif Regular" size="17.0" />
+               </font></TextField>
+            <Label fx:id="nameLabel" layoutX="347.0" layoutY="201.0" textFill="#005eff">
+               <font>
+                  <Font name="SansSerif Bold" size="17.0" />
+               </font></Label>
+            <ChoiceBox fx:id="choiceBox" layoutX="345.0" layoutY="80.0" prefHeight="25.0" prefWidth="213.0">
+             <items>
+                 <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Faculty" />
+                     <String fx:value="Finance" />
+                     <String fx:value="library" />
+                 </FXCollections>
+             </items>
+         </ChoiceBox>
+             <Label layoutX="54.0" layoutY="84.0" text="Branch" textAlignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font></Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="254.0" layoutY="157.0" mnemonicParsing="false" onAction="#findPerson" style="-fx-background-color: green;" text="Find Person" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="238.0" layoutY="260.0" mnemonicParsing="false" onAction="#deletePerson" style="-fx-background-color: red;" text="Delete Person" textFill="WHITE">
+               <font>
+                  <Font name="Serif Regular" size="18.0" />
+               </font></Button>
+            <Label fx:id="msg" layoutX="345.0" layoutY="123.0" textAlignment="CENTER" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

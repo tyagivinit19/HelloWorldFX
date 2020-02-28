@@ -25,7 +25,16 @@ public class AdminMainPageController {
 
     }
 
-    public void deleteUser(ActionEvent actionEvent) {
+    public void deleteUser(ActionEvent actionEvent) throws IOException {
+
+        System.out.println("deleteUser");
+
+        Parent newroot = FXMLLoader.load(getClass().getResource("deleteUser.fxml"));
+
+        Stage stage = (Stage) aMP.getScene().getWindow();
+        stage.setScene(new Scene(newroot));
+        stage.show();
+
 
     }
 
