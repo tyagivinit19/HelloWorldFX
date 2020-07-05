@@ -11,7 +11,7 @@ public class AdminLogIn {
 
         final String USER_NAME = user;
         int status = 0;
-        System.out.println("Got it");
+//        System.out.println("Got it");
         try{
 
             Connection conn = DriverManager.getConnection(CONNECTION_STRING);
