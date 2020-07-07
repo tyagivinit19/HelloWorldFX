@@ -1,15 +1,13 @@
-package sample;
+package sample.administrator;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import sample.databaseClasses.FindPerson;
+import sample.administrator.databaseClasses.FindPerson;
 
 import java.io.IOException;
 import java.sql.SQLException;

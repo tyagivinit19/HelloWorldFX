@@ -1,4 +1,4 @@
-package sample;
+package sample.administrator;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import sample.databaseClasses.AdminLogIn;
+import sample.administrator.databaseClasses.AdminLogIn;
 
 import java.io.IOException;
 

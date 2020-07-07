@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="sD" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ShowDetailsController">
+<AnchorPane fx:id="sD" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.administrator.ShowDetailsController">
    <children>
       <Pane prefHeight="115.0" prefWidth="601.0" style="-fx-background-color: blue;" />
       <GridPane layoutX="1.0" layoutY="115.0" prefHeight="213.0" prefWidth="600.0">

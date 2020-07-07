@@ -1,6 +1,6 @@
-package sample.databaseClasses;
+package sample.administrator.databaseClasses;
 
-import sample.ShowDetailsController;
+import sample.administrator.ShowDetailsController;
 
 import java.sql.*;
 

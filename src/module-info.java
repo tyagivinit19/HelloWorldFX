@@ -6,4 +6,6 @@ module ERP {
     requires java.sql;
 
     opens sample;
+    opens sample.administrator;
+    opens sample.faculty;
 }

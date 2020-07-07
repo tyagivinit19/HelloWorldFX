@@ -1,4 +1,4 @@
-package sample.databaseClasses;
+package sample.administrator.databaseClasses;
 
 import java.sql.*;
 
