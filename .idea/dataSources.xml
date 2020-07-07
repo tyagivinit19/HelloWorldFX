@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="adminLogInDatabase" uuid="81b1a288-c03a-4644-af80-869ad11d48df">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Dell\IdeaProjects\HelloWorldFX\src\sample\databaseFile\adminLogInDatabase.db</jdbc-url>
+    </data-source>
+  </component>
+</project>

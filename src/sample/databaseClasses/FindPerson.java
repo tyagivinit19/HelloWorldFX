@@ -1,5 +1,7 @@
 package sample.databaseClasses;
 
+import sample.ShowDetailsController;
+
 import java.sql.*;
 
 public class FindPerson {
@@ -18,7 +20,7 @@ public class FindPerson {
         }
         else
         {
-            if (branch.isBlank())
+            if (branch == null)
             {
                 status = "b";
             }
@@ -38,6 +40,7 @@ public class FindPerson {
                     {
                         System.out.println("Found");
                         status = results.getString("name");
+//                        System.out.println(results);
 
                     }
                     else
@@ -59,5 +62,27 @@ public class FindPerson {
 
 
         return status;
+    }
+
+    public void personDetails(ShowDetailsController showDetailsController) throws SQLException {
+        System.out.println(showDetailsController.userName.getText()+"P");
+        Connection conn = DriverManager.getConnection(CONNECTION_STRING);
+        Statement statement = conn.createStatement();
+
+        ResultSet results = statement.executeQuery("SELECT * " +
+                "FROM " + showDetailsController.branch.getText() +" WHERE username = '" +
+                showDetailsController.userName.getText() +"'");
+
+//        System.out.println(results.getString("name"));
+//        System.out.println(results.getString("phone"));
+
+        String name = results.getString("name");
+        String address = results.getString("address");
+        String phone = results.getString("phone");
+
+        showDetailsController.showDetails(name, address, phone);
+
+
+
     }
 }

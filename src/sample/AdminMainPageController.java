@@ -38,7 +38,14 @@ public class AdminMainPageController {
 
     }
 
-    public void details(ActionEvent actionEvent) {
+    public void details(ActionEvent actionEvent) throws IOException {
+
+        System.out.println("details of user");
+        Parent newroot = FXMLLoader.load(getClass().getResource("detailUser.fxml"));
+
+        Stage stage = (Stage) aMP.getScene().getWindow();
+        stage.setScene(new Scene(newroot));
+        stage.show();
 
     }
 
