@@ -3,9 +3,15 @@ package sample;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import sample.databaseClasses.FindPerson;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class ShowDetailsController {
@@ -14,6 +20,7 @@ public class ShowDetailsController {
     public Label address;
     public Label phone;
     public Label branch;
+    public AnchorPane sD;
 
 
     public void setUserName(String userName) {
@@ -47,6 +54,12 @@ public class ShowDetailsController {
     }
 
 
-    public void mainMenu(ActionEvent actionEvent) {
+    public void mainMenu(ActionEvent actionEvent) throws IOException {
+
+        Parent newroot = FXMLLoader.load(getClass().getResource("adminMainPage.fxml"));
+
+        Stage stage = (Stage) sD.getScene().getWindow();
+        stage.setScene(new Scene(newroot));
+        stage.show();
     }
 }

@@ -65,7 +65,9 @@ public class FindPerson {
     }
 
     public void personDetails(ShowDetailsController showDetailsController) throws SQLException {
-        System.out.println(showDetailsController.userName.getText()+"P");
+
+
+//        System.out.println(showDetailsController.userName.getText()+"P");
         Connection conn = DriverManager.getConnection(CONNECTION_STRING);
         Statement statement = conn.createStatement();
 
@@ -81,7 +83,8 @@ public class FindPerson {
         String phone = results.getString("phone");
 
         showDetailsController.showDetails(name, address, phone);
-
+        statement.close();
+        conn.close();
 
 
     }

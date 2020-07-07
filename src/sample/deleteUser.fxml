@@ -48,7 +48,7 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="238.0" layoutY="260.0" mnemonicParsing="false" onAction="#deletePerson" style="-fx-background-color: red;" text="Delete Person" textFill="WHITE">
+            <Button fx:id="deletePerson" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="238.0" layoutY="260.0" mnemonicParsing="false" onAction="#deletePerson" style="-fx-background-color: red;" text="Delete Person" textFill="WHITE">
                <font>
                   <Font name="Serif Regular" size="18.0" />
                </font></Button>
