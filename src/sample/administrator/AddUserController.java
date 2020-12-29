@@ -1,7 +1,5 @@
-package sample;
+package sample.administrator;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,9 +7,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import sample.databaseClasses.AddUser;
+import sample.administrator.databaseClasses.AddUser;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 public class AddUserController {
 
@@ -126,5 +126,13 @@ public class AddUserController {
         }
 
 
+    }
+
+    public void back(ActionEvent actionEvent) throws IOException {
+        Parent newroot = FXMLLoader.load(getClass().getResource("adminMainPage.fxml"));
+
+        Stage stage = (Stage) aU.getScene().getWindow();
+        stage.setScene(new Scene(newroot));
+        stage.show();
     }
 }

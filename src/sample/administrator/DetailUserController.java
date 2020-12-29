@@ -1,4 +1,4 @@
-package sample;
+package sample.administrator;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import sample.databaseClasses.FindPerson;
+import sample.administrator.databaseClasses.FindPerson;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -64,5 +64,14 @@ public class DetailUserController {
         }
 
 
+    }
+
+    public void back(ActionEvent actionEvent) throws IOException {
+
+        Parent newroot = FXMLLoader.load(getClass().getResource("adminMainPage.fxml"));
+
+        Stage stage = (Stage) dU.getScene().getWindow();
+        stage.setScene(new Scene(newroot));
+        stage.show();
     }
 }

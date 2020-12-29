@@ -6,14 +6,16 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="dU" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DeleteUserController">
+<AnchorPane fx:id="dU" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.administrator.DeleteUserController">
    <children>
       <Pane prefHeight="88.0" prefWidth="601.0" style="-fx-background-color: blue;" />
-      <AnchorPane layoutY="87.0" prefHeight="313.0" prefWidth="601.0">
+      <AnchorPane layoutY="87.0" prefHeight="313.0" prefWidth="601.0" style="-fx-background-color: white;">
          <children>
             <Label layoutX="54.0" layoutY="30.0" text="UserName" textAlignment="CENTER">
                <font>
@@ -53,6 +55,15 @@
                   <Font name="Serif Regular" size="18.0" />
                </font></Button>
             <Label fx:id="msg" layoutX="345.0" layoutY="123.0" textAlignment="CENTER" textFill="RED" />
+            <Button fx:id="back" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#back" prefHeight="45.0" prefWidth="50.0" style="-fx-background-color: white; -fx-text-alignment: left; -fx-padding: 0;" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </children>

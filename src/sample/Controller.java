@@ -2,7 +2,6 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -28,7 +27,7 @@ public class Controller {
 
     public void admin(ActionEvent actionEvent) throws IOException{
 
-        Parent newroot = FXMLLoader.load(getClass().getResource("logIn.fxml"));
+        Parent newroot = FXMLLoader.load(getClass().getResource("administrator/logIn.fxml"));
 
         Stage stage = (Stage) mP.getScene().getWindow();
         stage.setScene(new Scene(newroot));

@@ -1,4 +1,4 @@
-package sample;
+package sample.administrator;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -7,7 +7,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 public class AdminMainPageController {
 
@@ -50,4 +52,11 @@ public class AdminMainPageController {
     }
 
 
+    public void back(ActionEvent actionEvent) throws IOException {
+        URL url = new File("src/sample/mainPage.fxml").toURI().toURL();
+        Parent newroot = FXMLLoader.load(url);
+        Stage stage = (Stage) aMP.getScene().getWindow();
+        stage.setScene(new Scene(newroot));
+        stage.show();
+    }
 }
